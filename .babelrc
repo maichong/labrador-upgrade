@@ -1,0 +1,19 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": 5
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    "syntax-flow",
+    "transform-flow-strip-types",
+    "transform-runtime"
+  ],
+  "ignore": [
+  ]
+}

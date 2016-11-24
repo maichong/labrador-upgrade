@@ -1,0 +1,9 @@
+#!/usr/bin/env node
+
+'use strict';
+
+process.env.DEBUG = '*';
+
+process.title = 'labrador-upgrade';
+
+require('../lib/index');

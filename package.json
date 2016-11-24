@@ -1,0 +1,49 @@
+{
+  "name": "labrador-upgrade",
+  "version": "0.6.0",
+  "description": "Labrador代码升级与转换工具",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel -d lib src",
+    "watch": "babel -w -d lib src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maichong/labrador-upgrade.git"
+  },
+  "author": {
+    "email": "liang@maichong.it",
+    "name": "liang",
+    "url": "https://github.com/liangxingchen"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maichong/labrador-upgrade/issues"
+  },
+  "homepage": "https://github.com/maichong/labrador-upgrade#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.18.2",
+    "babel-eslint": "^7.1.1",
+    "babel-plugin-syntax-export-extensions": "^6.13.0",
+    "babel-plugin-syntax-flow": "^6.18.0",
+    "babel-plugin-transform-flow-strip-types": "^6.18.0",
+    "babel-preset-env": "^0.0.8",
+    "eslint": "^3.10.2",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-react": "^6.7.1"
+  },
+  "dependencies": {
+    "archiver-promise": "^1.0.0",
+    "commander": "^2.9.0",
+    "debug": "^2.3.3",
+    "json5": "^0.5.0",
+    "lodash": "^4.17.2",
+    "moment": "^2.17.0",
+    "read-promise": "^1.0.0",
+    "shelljs": "^0.7.5",
+    "update-notifier": "^1.0.2",
+    "xmldom": "^0.1.22"
+  }
+}
