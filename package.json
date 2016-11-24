@@ -1,6 +1,6 @@
 {
   "name": "labrador-upgrade",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "description": "Labrador代码升级与转换工具",
   "main": "index.js",
   "scripts": {

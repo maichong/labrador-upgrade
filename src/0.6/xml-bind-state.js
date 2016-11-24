@@ -51,7 +51,7 @@ function checkString(string, ignores) {
 
   // 获取类似 a.b.c 表达式中第一个有效变量名 a
   function getFirstWord(word) {
-    return word.match(/[a-z][\w\d]*/i)[0];
+    return word.match(/[a-z_][\w\d]*/i)[0];
   }
 
   // 检查类似 a.b.c 格式表达式是否忽略绑定
@@ -91,7 +91,7 @@ function checkString(string, ignores) {
             //console.log('str', str);
 
             // 如果为简写属性表达式，例如 {foo}
-            if (/^[a-z][\w\d]*$/i.test(str)) {
+            if (/^[a-z_][\w\d]*$/i.test(str)) {
               if (ignores[str]) {
                 return str + ':' + str;
               }
@@ -101,7 +101,7 @@ function checkString(string, ignores) {
             }
 
             // 属性展开表达式 ...foo
-            if (/^\.{3}[a-z][\w\d.\[\]]*$/i.test(str)) {
+            if (/^\.{3}[a-z_][\w\d.\[\]]*$/i.test(str)) {
               let word = str.substr(3);
               if (shouldIgnore(word)) {
                 return str;
@@ -192,6 +192,10 @@ export function bind(node, ignores) {
   for (let i in node.childNodes) {
     if (!/^\d+$/.test(i)) continue;
     let n = node.childNodes[i];
+    // 不转换template 定义
+    if (n.nodeName === 'template' && n.getAttribute('name')) {
+      continue;
+    }
     bind(n, ignores);
   }
 }

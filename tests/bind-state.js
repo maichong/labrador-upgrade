@@ -191,6 +191,17 @@ function test(index, input, output) {
     <template is="{{item % 2 == 0 ? 'even' : state.odd}}"/>
 </block>
 
+++++++++++++++++++++++++++14
+
+
+<template name="foo">
+  <view>{{bar}}</view>
+</template>
+--------------------------
+<template name="foo">
+  <view>{{bar}}</view>
+</template>
+
 
 
 `.split(/\n[\+\d]+/).map(function (code) {
