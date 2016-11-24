@@ -1,11 +1,14 @@
 {
   "name": "labrador-upgrade",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "Labrador代码升级与转换工具",
   "main": "index.js",
   "scripts": {
     "build": "babel -d lib src",
     "watch": "babel -w -d lib src"
+  },
+  "bin": {
+    "labrador-upgrade": "bin/labrador-upgrade"
   },
   "repository": {
     "type": "git",
